@@ -2,11 +2,13 @@ import './styles.css'
 import { ContextMenu } from './menu'
 import { BackgroundModule } from '../src/modules/background.module';
 import { AudioModule } from '../src/modules/audio.module';
+import { ClicksModule } from '../src/modules/clicks.module';
 
 const menu = new ContextMenu('.menu');
 const background = new BackgroundModule();
 const audio = new AudioModule();
-const allModules = [background,audio];
+const clickAnalitics = new ClicksModule();
+const allModules = [background,audio,clickAnalitics];
 allModules.forEach((module) => {
    menu.add(module);
 })
