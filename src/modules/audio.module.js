@@ -7,23 +7,26 @@ export class AudioModule extends Module {
     #sound
     #random
 
-    constructor (sound = [], random) {
+    constructor () {
         super('audio', 'Случайный звук')
         this.#sound = sound;
         this.#random = random;
     }
 
-    createSound() {
+    trigger() {
         const soundId = this.#random(1, 11);
-        const myaudio = new Audio;
+        let myaudio;
         this.#sound.forEach((audio) => {
             if (audio.id === soundId) {
-                myaudio.src = audio.audioUrl;
+                myaudio = new Audio(audio.audioUrl);
+                document.body.prepend(myaudio);
+                const audiod = document.querySelector('audio')
+                audiod.setAttribute('controls', '');
                 myaudio.play();
+                audiod.removeAttribute('controls');
+                setTimeout(() => { audiod.remove() }, 3000);
             };
         });
     };   
 
 };
-
-const audioModule = new AudioModule(sound, random);
