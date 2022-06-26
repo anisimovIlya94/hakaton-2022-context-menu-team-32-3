@@ -11,9 +11,8 @@ const background = new BackgroundModule();
 const audio = new AudioModule();
 const clickAnalitics = new ClicksModule();
 const calculator = new CalculatorModule();
-const allModules = [background,audio,clickAnalitics,calculator];
 const figure = new CreateFigure();
-const allModules = [background,audio,clickAnalitics,figure];
+const allModules = [background,audio,clickAnalitics,figure,calculator];
 allModules.forEach((module) => {
    menu.add(module);
 })
