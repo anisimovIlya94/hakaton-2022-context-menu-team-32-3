@@ -9,6 +9,7 @@ import { TimerModule } from '../src/modules/timer.module'
 import { BigTimerModule } from '../src/modules/bigtimer.module';
 import { TimerBlock } from '../src/modules/current.time';
 import { getCustomMessege } from '../src/modules/custom-message.module';
+import { testHappiness } from '../src/modules/happy.module';
 
 const menu = new ContextMenu('.menu');
 const background = new BackgroundModule();
@@ -20,7 +21,8 @@ const timer = new TimerModule();
 const bigtimer = new BigTimerModule();
 const time = new TimerBlock();
 const customMessage = new getCustomMessege();
-const allModules = [background,audio,clickAnalitics,figure,calculator,time,bigtimer,customMessage,timer];
+const happiness = new testHappiness();
+const allModules = [background,audio,clickAnalitics,figure,calculator,time,bigtimer,customMessage,timer,happiness];
 allModules.forEach((module) => {
    menu.add(module);
 })
