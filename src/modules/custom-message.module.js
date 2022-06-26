@@ -79,6 +79,6 @@ export class getCustomMessege extends Module {
       `;
      setTimeout(() => {
         customMessageContainer.remove();
-     }, 2000);
+     }, 5000);
   }
 }
