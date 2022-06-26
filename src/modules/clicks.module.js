@@ -8,6 +8,7 @@ export class ClicksModule extends Module {
       let clicks = 0;
 
       const titleElelementHTML = document.createElement('p');
+      titleElelementHTML.style.margin = '200px 0 0 200px';
       titleElelementHTML.textContent = 'Идет подсчет кликов';
       titleElelementHTML.style.fontSize = '25px';
       titleElelementHTML.style.color = '#343434';

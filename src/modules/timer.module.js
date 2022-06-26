@@ -1,21 +1,27 @@
 import { Module } from '../core/module';
 import { img } from '../constant/img'
 
-
-
-
-
 export class TimerModule extends Module {
     #container;
-  
     constructor(time = 10) {
         super('timer', 'Простой таймер')
       this.time = time;
-      this.#container = document.createElement('div');
+      this.#container = null;
     }
   
-    
-    trigger() {
+  trigger() {
+    this.#container = document.createElement('div');
+    this.#container.style.cssText = `
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        overflow: auto;`
       let second = this.time;
         this.#container.className = 'main-container';
         const timeBox = document.createElement('div');

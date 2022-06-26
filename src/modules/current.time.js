@@ -1,5 +1,5 @@
 import { Module } from '../core/module'
-import * as DateUtils from '../core/date-time'
+import * as DateUtils from '../utils'
 
 export class TimerBlock extends Module {
     #timerContainer
