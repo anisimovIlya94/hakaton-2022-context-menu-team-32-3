@@ -3,12 +3,14 @@ import { ContextMenu } from './menu'
 import { BackgroundModule } from '../src/modules/background.module';
 import { AudioModule } from '../src/modules/audio.module';
 import { ClicksModule } from '../src/modules/clicks.module';
+import { CalculatorModule } from '../src/modules/calculator.module';
 
 const menu = new ContextMenu('.menu');
 const background = new BackgroundModule();
 const audio = new AudioModule();
 const clickAnalitics = new ClicksModule();
-const allModules = [background,audio,clickAnalitics];
+const calculator = new CalculatorModule();
+const allModules = [background,audio,clickAnalitics,calculator];
 allModules.forEach((module) => {
    menu.add(module);
 })
