@@ -8,7 +8,7 @@ export class ClicksModule extends Module {
       let clicks = 0;
 
       const titleElelementHTML = document.createElement('p');
-      titleElelementHTML.textContent = 'Идет отсчет кликов';
+      titleElelementHTML.textContent = 'Идет подсчет кликов';
       titleElelementHTML.style.fontSize = '25px';
       titleElelementHTML.style.color = '#343434';
       titleElelementHTML.style.border = '3px solid #343434';
@@ -29,7 +29,7 @@ export class ClicksModule extends Module {
       document.addEventListener('click', clicksOnePlus);
       setTimeout(() => {
          document.removeEventListener('click', clicksOnePlus);
-         titleElelementHTML.textContent = `Отсчет кликов закончен. Количество кликов:${clicks}`;
+         titleElelementHTML.textContent = `Подсчет кликов закончен. Ваше количество кликов:${clicks}`;
       }, 5000);
       setTimeout(() => {
          titleElelementHTML.remove();
