@@ -1,7 +1,8 @@
 import moment from "moment";
 
 export const getTodayDateFormat = (date) => {
-   return moment(date).format("MMMM Do YYYY")
+   moment.locale('ru');
+   return moment(date).format("ll")
 }
 
 export const getCurrentTime = (date) => {

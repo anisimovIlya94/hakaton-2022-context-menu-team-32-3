@@ -11,22 +11,23 @@ export class BigTimerModule extends Module {
 
     constructor() {
         super('bigTimer', 'Большой Таймер')
-        this.#container = document.createElement('div');
+        this.#container = null;
     }
 
 
     trigger() {
+        this.#container = document.createElement('div');
         this.#container.className = 'main-container';
 
         const minutePar = document.createElement('p');
         minutePar.className = 'label';
         minutePar.id = 'minute-label';
-        minutePar.innerText = 'Minute';
+        minutePar.innerText = 'Минуты';
 
         const secondsPar = document.createElement('p');
         secondsPar.className = 'label';
         secondsPar.id = 'second-label';
-        secondsPar.innerText = 'Seconds';
+        secondsPar.innerText = 'Секунды';
 
         this.#inputMinute = document.createElement('input');
         this.#inputMinute.className = 'time';
@@ -47,7 +48,7 @@ export class BigTimerModule extends Module {
         this.#startBtn = document.createElement('button');
         this.#startBtn.className = 'button';
         this.#startBtn.id = 'start';
-        this.#startBtn.innerText = 'Start';
+        this.#startBtn.innerText = 'Старт';
         this.#startBtn.addEventListener('click',() => {
             const startTimer = setInterval(() => {
                 if (this.#inputMinute.value == 0 && this.#inputSeconds.value == 0){
@@ -66,7 +67,7 @@ export class BigTimerModule extends Module {
         this.#stopBtn = document.createElement('button');
         this.#stopBtn.className = 'button'
         this.#stopBtn.id = 'stop';
-        this.#stopBtn.innerText = 'Remove';
+        this.#stopBtn.innerText = 'Выход';
         this.#stopBtn.addEventListener('click', () => {
             this.#container.remove();
         });

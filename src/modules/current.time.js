@@ -20,7 +20,7 @@ export class TimerBlock extends Module {
         }, 1000)
     }
 
-    #render() {
+    render() {
         this.#timerContainer = document.createElement('div')
         this.#time = document.createElement('div');
         this.#timerContainer.id = 'timer'
@@ -47,7 +47,7 @@ export class TimerBlock extends Module {
     }
 
     trigger() {
-        const timerBlockHTML = this.#render()
+        const timerBlockHTML = this.render()
         document.body.append(timerBlockHTML)
     }
 }

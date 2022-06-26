@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color:#343434 */
 }
 
 body {
@@ -107,8 +106,8 @@ body {
 }
 #stop {
     grid-area: 3 / 3 / 3 / 5;
-
-#timer {
+}
+#timer{
     border: 1px solid black;
     color: black;
     padding: 15px;

@@ -16,7 +16,7 @@ const calculator = new CalculatorModule();
 const figure = new CreateFigure();
 const bigtimer = new BigTimerModule();
 const time = new TimerBlock();
-const allModules = [background,audio,clickAnalitics,figure,calculator,time,figure];
+const allModules = [background,audio,clickAnalitics,figure,calculator,time,bigtimer];
 allModules.forEach((module) => {
    menu.add(module);
 })
