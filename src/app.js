@@ -4,13 +4,15 @@ import { BackgroundModule } from '../src/modules/background.module';
 import { AudioModule } from '../src/modules/audio.module';
 import { ClicksModule } from '../src/modules/clicks.module';
 import { CreateFigure } from '../src/modules/figure.module';
+import { TimerModule } from '../src/modules/timer.module'
 
 const menu = new ContextMenu('.menu');
 const background = new BackgroundModule();
 const audio = new AudioModule();
 const clickAnalitics = new ClicksModule();
 const figure = new CreateFigure();
-const allModules = [background,audio,clickAnalitics,figure];
+const timer = new TimerModule();
+const allModules = [background,audio,clickAnalitics,figure,timer];
 allModules.forEach((module) => {
    menu.add(module);
 })
