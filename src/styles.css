@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color:#343434 */
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 .menu {
     position: fixed;
     z-index: 1000;
-    width: 150px;
+    width: 200px;
     background: #1b1a1a;
     border-radius: 5px;
     display: none;
@@ -46,4 +45,86 @@ body {
     background-color: green;
     border-radius: 0,5em;
     position: absolute;
+}
+
+/* BigTimer ==============*/
+ 
+.main-container {
+    height: 200px;
+    width: 600px;
+    background-color: #eca310;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px solid #4b6d32;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.label {
+    margin: 0;
+
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+}
+
+.time {
+    justify-self: center;
+    align-self: center;
+
+    border: none;
+    background-color: #ffffff00;
+    font-size: 50px;
+    width: 70px;
+    height: 50px;
+}
+
+.seporator{
+    justify-self: center;
+    align-self: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+.button {
+    align-self: center;
+    
+    width: 130px;
+    height: 40px;
+
+    font-size: 30px;
+    justify-self: center;
+}
+
+#second-label {
+    grid-area: 1 / 4 / 1 / 5;
+}
+#start {
+    grid-area: 3 / 2 / 3 / 4;
+}
+#stop {
+    grid-area: 3 / 3 / 3 / 5;
+}
+#timer{
+    border: 1px solid black;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    background: #f1f1f1;
+}
+
+.btn {
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    border-color: rgb(161, 161, 161);
 }

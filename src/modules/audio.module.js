@@ -20,11 +20,11 @@ export class AudioModule extends Module {
             if (audio.id === soundId) {
                 myaudio = new Audio(audio.audioUrl);
                 document.body.prepend(myaudio);
-                const audiod = document.querySelector('audio')
-                audiod.setAttribute('controls', '');
+                const audioHTML = document.querySelector('audio')
+                audioHTML.setAttribute('controls', '');
                 myaudio.play();
-                audiod.removeAttribute('controls');
-                setTimeout(() => { audiod.remove() }, 3000);
+                audioHTML.removeAttribute('controls');
+                setTimeout(() => { audioHTML.remove() }, 3000);
             };
         });
     };   
