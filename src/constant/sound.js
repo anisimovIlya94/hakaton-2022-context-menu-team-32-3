@@ -42,7 +42,7 @@ export const sound = [
   },
   {
     id: 9,
-    audioUrl: '../src/media/audio//slon.mp3',
+    audioUrl: '../src/media/audio/slon.mp3',
     audioName: 'slon',
   },
   {

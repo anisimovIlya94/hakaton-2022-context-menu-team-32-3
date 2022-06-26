@@ -1,4 +1,5 @@
 import { Module } from '../core/module';
+import { img } from '../constant/img'
 
 
 
@@ -19,25 +20,26 @@ export class TimerModule extends Module {
         this.#container.className = 'main-container';
         const timeBox = document.createElement('div');
         timeBox.className = 'taime-box';
-        const timerH1= document.createElement('h1');
-        timerH1.className = 'taimer-content';
-        timerH1.textContent = `${this.time}`
-        timerH1.style.color = "red"
+        timeBox.style.width = '600px';
+        timeBox.style.height = '600px';
   
-        timeBox.append(timerH1);
         this.#container.append(timeBox);
         document.body.append(this.#container);
   
         const startInterval = setInterval(() => {
           if (second === 0) {
-            timerH1.textContent = `The Time is Over`;
             clearInterval(startInterval);
             setTimeout(() => {
               this.#container.remove()
             }, 2000)
           } else if (second > 0) {
               second -=1;
-              timerH1.textContent = `${second}`
+              img.forEach((img) => {
+                if (second == img.id) {
+                   timeBox.style.backgroundImage = `url(${img.imgUrl})`;
+                   timeBox.style.backgroundSize = `100% 100%`
+                }
+              });
           }
         }, 1000)  
     }  
